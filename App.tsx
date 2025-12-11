@@ -108,57 +108,30 @@ function App() {
               </div>
             </div>
 
-            {/* Right Visual (Floating Card) */}
+            {/* Right Visual (Floating Image Only) */}
             <div className="relative hidden lg:block perspective-1000">
-              <div className="relative w-[400px] h-[580px] mx-auto transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out group">
-                {/* Floating Elements */}
+              <div className="relative w-[400px] mx-auto transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out group">
+                
+                {/* Floating Elements (Background) */}
                 <div className="absolute -top-12 -right-12 z-0">
                   <div className="w-32 h-32 rounded-full border border-cyan-500/20 animate-[spin_10s_linear_infinite]"></div>
                   <div className="absolute inset-0 w-32 h-32 rounded-full border border-purple-500/20 border-dashed animate-[spin_15s_linear_infinite_reverse]"></div>
                 </div>
 
-                {/* Card Container */}
-                <div className="absolute inset-0 bg-[#0a0a0a] rounded-[30px] border border-zinc-800 shadow-[0_0_100px_rgba(6,182,212,0.15)] overflow-hidden flex flex-col z-10 group-hover:shadow-[0_0_120px_rgba(168,85,247,0.25)] transition-shadow duration-500">
-                   
-                   {/* Card Header */}
-                   <div className="h-1/2 bg-gradient-to-br from-zinc-900 to-black relative p-6 flex flex-col justify-between border-b border-zinc-800">
-                      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-                      <div className="flex justify-between items-start z-10">
-                        <Cpu className="text-cyan-400" />
-                        <span className="text-[10px] font-mono text-zinc-500 border border-zinc-800 px-2 py-1 rounded bg-black/50">PREVIEW_MODE</span>
-                      </div>
-                      <div className="z-10">
-                        <div className="w-24 h-24 rounded-full bg-zinc-800 border-2 border-cyan-500/30 mb-4 flex items-center justify-center overflow-hidden">
-                          <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=200&auto=format&fit=crop" className="w-full h-full object-cover opacity-80" alt="demo"/>
-                        </div>
-                        <h3 className="text-2xl font-bold text-white">CryptoChad.sol</h3>
-                        <p className="text-cyan-500 text-xs font-mono mt-1">LVL 99 • WHALE HUNTER</p>
-                      </div>
-                   </div>
-
-                   {/* Card Body */}
-                   <div className="h-1/2 bg-black p-6 flex flex-col relative">
-                      <div className="space-y-4 z-10">
-                        <div className="flex justify-between items-center p-3 rounded-lg bg-zinc-900/50 border border-zinc-800">
-                          <span className="text-xs text-zinc-400 font-mono">DEGEN SCORE</span>
-                          <span className="text-xl font-bold text-purple-400">96/100</span>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3">
-                           <div className="h-20 bg-zinc-900/30 rounded border border-zinc-800 p-3">
-                              <span className="text-[10px] text-zinc-500 uppercase font-bold">Strength</span>
-                              <p className="text-sm text-zinc-300 mt-1">Diamond Hands</p>
-                           </div>
-                           <div className="h-20 bg-zinc-900/30 rounded border border-zinc-800 p-3">
-                              <span className="text-[10px] text-zinc-500 uppercase font-bold">Weakness</span>
-                              <p className="text-sm text-zinc-300 mt-1">Leverage 100x</p>
-                           </div>
-                        </div>
-                      </div>
+                {/* Glowing Image Container */}
+                <div className="relative z-10 p-[3px] rounded-2xl bg-gradient-to-br from-cyan-500 via-purple-600 to-fuchsia-600 shadow-[0_0_60px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.7)] transition-shadow duration-500">
+                   <div className="bg-[#050505] rounded-xl overflow-hidden relative">
+                      <img 
+                        src="https://pbs.twimg.com/media/G753suDXkAECrjA?format=jpg&name=medium" 
+                        className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300 filter contrast-110 saturate-110" 
+                        alt="Degen Card Preview"
+                      />
                       
-                      {/* Scanline */}
-                      <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[size:100%_2px,3px_100%]"></div>
+                      {/* Subtle Scanline Overlay */}
+                      <div className="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_2px,3px_100%]"></div>
                    </div>
                 </div>
+
               </div>
             </div>
 
