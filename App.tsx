@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Analyzer } from './components/Analyzer';
-import { Tokenomics } from './components/Tokenomics';
 import { Button } from './components/Button';
-import { Activity, Lock, Search, X, Zap, Globe, Cpu } from 'lucide-react';
+import { Activity, Lock, Search, X, Zap, Cpu } from 'lucide-react';
 
 const Marquee = () => (
   <div className="relative flex overflow-x-hidden bg-cyan-950/20 border-y border-cyan-500/20 py-3 backdrop-blur-sm">
@@ -86,12 +85,6 @@ function App() {
                     Launch App
                   </span>
                 </Button>
-                <Button variant="secondary" className="w-full sm:w-auto text-base py-4 border-zinc-800 bg-zinc-900/50 backdrop-blur">
-                  <span className="flex items-center justify-center gap-2">
-                    <Globe size={18} />
-                    Explore Docs
-                  </span>
-                </Button>
               </div>
 
               <div className="mt-12 flex items-center gap-6 text-zinc-600">
@@ -169,8 +162,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      <Tokenomics />
 
       {/* ANALYZER MODAL */}
       {isAnalyzerOpen && (
