@@ -7,28 +7,32 @@ const XLogo = () => (
 
 export const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
-      <div className="bg-[#0b0f19]/80 backdrop-blur-md rounded-full px-8 py-4 flex items-center justify-between w-full max-w-7xl border border-white/5">
-        
-        {/* Logo - Text Only */}
-        <div className="flex items-center gap-3">
-          <span className="text-2xl font-bold tracking-tight font-tech uppercase bg-gradient-to-r from-[#BD00FF] to-[#00F0FF] bg-clip-text text-transparent">
-            DEGENCARD
-          </span>
-        </div>
-        
-        {/* Right Side */}
-        <div className="flex items-center gap-6">
-          {/* Contract Address Pill */}
-          <div className="hidden md:flex items-center gap-3 px-5 py-2 bg-[#1a1f2e] border border-white/5 rounded-full hover:border-[#00F0FF]/30 transition-colors group cursor-pointer">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF] animate-pulse"></span>
-            <span className="text-zinc-400 font-mono text-xs tracking-wider group-hover:text-white transition-colors">CA: SOON</span>
-            <Copy size={14} className="text-zinc-500 group-hover:text-[#00F0FF] transition-colors" />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-purple-900/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          
+          {/* Logo - Text Only, Pixel Font, Purple -> Blue Gradient */}
+          <div className="flex items-center gap-3">
+            <span className="text-2xl font-bold tracking-tight font-tech uppercase bg-gradient-to-r from-[#BD00FF] to-[#00F0FF] bg-clip-text text-transparent filter drop-shadow-[0_0_5px_rgba(189,0,255,0.5)]">
+              DEGENCARD
+            </span>
           </div>
+          
+          <div className="flex items-center gap-4 md:gap-6">
+            {/* Contract Address Box */}
+            <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-purple-900/10 hover:bg-purple-900/20 border border-purple-500/20 rounded-lg transition-colors group cursor-pointer shadow-[0_0_10px_rgba(168,85,247,0.1)]">
+              <span className="text-purple-400 font-mono text-xs font-bold uppercase">CA:</span>
+              <span className="text-purple-200/80 font-mono text-xs tracking-wider">xxxxxxxxxxxxxxxxxxxxxxx</span>
+              <Copy size={14} className="text-purple-500 group-hover:text-[#00F0FF] transition-colors" />
+            </div>
 
-          <a href="https://x.com" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-colors">
-            <XLogo />
-          </a>
+            <nav className="flex items-center gap-6">
+               <a href="https://x.com/degencardpump?s=11" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-[#00F0FF] transition-colors">
+                <XLogo />
+              </a>
+              <a href="#tokenomics" className="hidden sm:block text-zinc-400 hover:text-[#00F0FF] transition-colors text-xs font-medium uppercase tracking-widest">Metrics</a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
