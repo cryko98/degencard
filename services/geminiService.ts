@@ -4,7 +4,8 @@ import { DegenAnalysis, Platform } from "../types";
 // Initialize Gemini Client
 // Vercel/Vite requires variables to start with VITE_ and be accessed via import.meta.env
 // We handle both process.env (for local/testing) and import.meta.env (for production build)
-const apiKey = (import.meta as any).env?.VITE_API_KEY || process.env.API_KEY;
+// Added check for 'process' to prevent browser crashes
+const apiKey = (import.meta as any).env?.VITE_API_KEY || (typeof process !== "undefined" ? process.env?.API_KEY : undefined);
 
 if (!apiKey) {
   console.warn("API Key is missing. Make sure to set VITE_API_KEY in your environment variables.");
