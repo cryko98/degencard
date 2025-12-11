@@ -30,7 +30,6 @@ export const Header: React.FC = () => {
                <a href="https://x.com/degencardpump?s=11" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-[#00F0FF] transition-colors">
                 <XLogo />
               </a>
-              <a href="#tokenomics" className="hidden sm:block text-zinc-400 hover:text-[#00F0FF] transition-colors text-xs font-medium uppercase tracking-widest">Metrics</a>
             </nav>
           </div>
         </div>
