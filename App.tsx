@@ -113,7 +113,7 @@ function App() {
                 <div className="relative z-10 p-[3px] rounded-2xl bg-gradient-to-br from-[#00F0FF] via-[#BD00FF] to-[#00F0FF] shadow-[0_0_60px_rgba(0,240,255,0.3)] group-hover:shadow-[0_0_80px_rgba(189,0,255,0.4)] transition-shadow duration-500">
                    <div className="bg-[#050505] rounded-xl overflow-hidden relative">
                       <img 
-                        src="https://pbs.twimg.com/media/G753suDXkAECrjA?format=jpg&name=medium" 
+                        src="https://pbs.twimg.com/media/G77Mz27WwAAGrId?format=jpg&name=medium" 
                         className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300 filter contrast-110 saturate-110" 
                         alt="Degen Card Preview"
                       />
