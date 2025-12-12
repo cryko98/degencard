@@ -6,6 +6,13 @@ const XLogo = () => (
 );
 
 export const Header: React.FC = () => {
+  const ca = "5TFzzLXgTmyfm1TR7fJzSudhJSe3BESTmeYvtzdQpump";
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(ca);
+    // Optional: You could add a toast notification here
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-purple-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,9 +27,13 @@ export const Header: React.FC = () => {
           
           <div className="flex items-center gap-4 md:gap-6">
             {/* Contract Address Box */}
-            <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-purple-900/10 hover:bg-purple-900/20 border border-purple-500/20 rounded-lg transition-colors group cursor-pointer shadow-[0_0_10px_rgba(168,85,247,0.1)]">
+            <div 
+              onClick={copyToClipboard}
+              className="hidden md:flex items-center gap-3 px-4 py-2 bg-purple-900/10 hover:bg-purple-900/20 border border-purple-500/20 rounded-lg transition-colors group cursor-pointer shadow-[0_0_10px_rgba(168,85,247,0.1)] active:scale-95"
+              title="Copy Address"
+            >
               <span className="text-purple-400 font-mono text-xs font-bold uppercase">CA:</span>
-              <span className="text-purple-200/80 font-mono text-xs tracking-wider">xxxxxxxxxxxxxxxxxxxxxxx</span>
+              <span className="text-purple-200/80 font-mono text-xs tracking-wider">{ca}</span>
               <Copy size={14} className="text-purple-500 group-hover:text-[#00F0FF] transition-colors" />
             </div>
 
